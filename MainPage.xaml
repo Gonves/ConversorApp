@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConversorApp.MainPage">
+
+    <ContentPage Title="Distancia">
+        <StackLayout Margin="10,20,20,10">
+            <Frame BorderColor="AntiqueWhite" CornerRadius="5">
+                <VerticalStackLayout>
+                    <Label Text="Digite a Distanica" />
+                    <Entry x:Name="NumDistancia"
+                       Placeholder="EX: 100"
+                      Keyboard="Numeric" />
+                    <Picker x:Name="selectDistancia" Title="Selecione">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Metro</x:String>
+                                <x:String>Km</x:String>
+                                <x:String>Milhas</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </VerticalStackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage Title="Peso">
+        <StackLayout Margin="10,20,20,10">
+            <Frame BorderColor="AntiqueWhite" CornerRadius="5">
+                <VerticalStackLayout>
+                    <Label Text="Digite o Peso" />
+                    <Entry x:Name="NumPeso"
+                        Placeholder="EX: 80.5"
+                       Keyboard="Numeric" />  
+                    <Picker x:Name="selectPeso" Title="Selecione">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Grama</x:String>
+                                <x:String>Quilograma</x:String>
+                                <x:String>Libra</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </VerticalStackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage Title="Temperatura">
+        <StackLayout Margin="10,20,20,10" >
+            <Frame BorderColor="AntiqueWhite"  CornerRadius="5">
+                <StackLayout>
+                    <Label Text="Digite a Temperatura"/>
+                    <Entry x:Name="NumTemp"
+                        Placeholder="EX: 35º"
+                       Keyboard="Numeric"/>
+                    
+                    <Picker x:Name="selectTemperatura" Title="Selecione">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Celsius</x:String>
+                                <x:String>Fahrenheit</x:String>
+                                <x:String>Kelvin</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>
