@@ -7,11 +7,12 @@
         <StackLayout Margin="10,20,20,10">
             <Frame BorderColor="AntiqueWhite" CornerRadius="5">
                 <VerticalStackLayout>
-                    <Label Text="Digite a Distanica" />
+                    <Label Text="Digite a Distância" />
                     <Entry x:Name="NumDistancia"
-                       Placeholder="EX: 100"
-                      Keyboard="Numeric" />
-                    <Picker x:Name="selectDistancia" Title="Selecione">
+                           Placeholder="EX: 100"
+                           Keyboard="Numeric" />
+                    <Label Text="Unidade de Origem" />
+                    <Picker x:Name="selectDistanciaOrigem" Title="Selecione">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Metro</x:String>
@@ -20,20 +21,36 @@
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
+                    <Label Text="Unidade de Destino" />
+                    <Picker x:Name="selectDistanciaDestino" Title="Selecione">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Metro</x:String>
+                                <x:String>Km</x:String>
+                                <x:String>Milhas</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Button Text="Converter Distância" Clicked="OnDistanciaClicked" 
+                            BackgroundColor="WhiteSmoke" 
+                            WidthRequest="200" HorizontalOptions="EndAndExpand"
+                            CornerRadius="10"/>
+                    <Label x:Name="ResultadoDistancia" Text="" FontSize="Medium" />
                 </VerticalStackLayout>
             </Frame>
         </StackLayout>
     </ContentPage>
-    
+
     <ContentPage Title="Peso">
         <StackLayout Margin="10,20,20,10">
             <Frame BorderColor="AntiqueWhite" CornerRadius="5">
                 <VerticalStackLayout>
                     <Label Text="Digite o Peso" />
                     <Entry x:Name="NumPeso"
-                        Placeholder="EX: 80.5"
-                       Keyboard="Numeric" />  
-                    <Picker x:Name="selectPeso" Title="Selecione">
+                           Placeholder="EX: 80.5"
+                           Keyboard="Numeric" />
+                    <Label Text="Unidade de Origem" />
+                    <Picker x:Name="selectPesoOrigem" Title="Selecione">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Grama</x:String>
@@ -42,21 +59,37 @@
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
+                    <Label Text="Unidade de Destino" />
+                    <Picker x:Name="selectPesoDestino" Title="Selecione">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Grama</x:String>
+                                <x:String>Quilograma</x:String>
+                                <x:String>Libra</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Button Text="Converter Peso" Clicked="OnPesoClicked" 
+                            BackgroundColor="WhiteSmoke" 
+                            WidthRequest="200" HorizontalOptions="EndAndExpand"
+                            CornerRadius="10"/>
+                    <Label x:Name="ResultadoPeso" Text="" FontSize="Medium" />
                 </VerticalStackLayout>
             </Frame>
         </StackLayout>
     </ContentPage>
-    
+
     <ContentPage Title="Temperatura">
-        <StackLayout Margin="10,20,20,10" >
+        <StackLayout Margin="10,20,20,10">
             <Frame BorderColor="AntiqueWhite"  CornerRadius="5">
-                <StackLayout>
+                <VerticalStackLayout>
                     <Label Text="Digite a Temperatura"/>
                     <Entry x:Name="NumTemp"
-                        Placeholder="EX: 35º"
-                       Keyboard="Numeric"/>
-                    
-                    <Picker x:Name="selectTemperatura" Title="Selecione">
+                           Placeholder="EX: 35º"
+                           Keyboard="Numeric"/>
+
+                    <Label Text="Unidade de Origem" />
+                    <Picker x:Name="selectTemperaturaOrigem" Title="Selecione">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Celsius</x:String>
@@ -65,7 +98,22 @@
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
-                </StackLayout>
+                    <Label Text="Unidade de Destino" />
+                    <Picker x:Name="selectTemperaturaDestino" Title="Selecione">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Celsius</x:String>
+                                <x:String>Fahrenheit</x:String>
+                                <x:String>Kelvin</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Button Text="Converter Temperatura" Clicked="OnTemperaturaClicked" 
+                            BackgroundColor="WhiteSmoke" 
+                            WidthRequest="200" HorizontalOptions="EndAndExpand"
+                            CornerRadius="10"/>
+                    <Label x:Name="ResultadoTemperatura" Text="" FontSize="Medium" />
+                </VerticalStackLayout>
             </Frame>
         </StackLayout>
     </ContentPage>
